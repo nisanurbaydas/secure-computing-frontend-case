@@ -85,14 +85,13 @@ export const TaskForm = () => {
 
                     <div className="form-group">
                         <label className="form-label mt-2" htmlFor="inputValid">Status</label>
-                        <input
-                            name="status"
-                            type="text"
-                            value={inputValues.status}
-                            onChange={handleInputChange}
-                            className="form-control"
-                            id="inputValid"
-                        />
+                        <select name="status" className="form-control" id="inputValid" onChange={handleInputChange}>
+                            <option value=''>Select Status</option>
+                            <option value="not started">Not started</option>
+                            <option value="in progress">In progress</option>
+                            <option value="overdue">Overdue</option>
+                            <option value="done">Done</option>
+                        </select>
                     </div>
 
 
